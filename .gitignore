@@ -1,0 +1,10 @@
+*.pyc
+*~
+\#*
+.#*
+*.swp
+.DStore/
+thumbs.db
+#storage/profiles
+#config.py
+.idea/*
