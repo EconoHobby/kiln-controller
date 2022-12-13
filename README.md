@@ -33,6 +33,7 @@ Turns a Banana Pi into an inexpensive, web-enabled kiln controller.
 
 ### Parts
 
+<<<<<<< Updated upstream
 | Image | Hardware | Description |
 | ------| -------- | ----------- |
 | ![Image](https://github.com/EconoHobby/kiln-controller/public/assets/images/rpi.png) | [Banana Pi](https://wiki.banana-pi.org/Banana_Pi_BPI-M2_ZERO) | Virtually any Banana Pi will work since only a few GPIO pins are being used. |
@@ -41,6 +42,16 @@ Turns a Banana Pi into an inexpensive, web-enabled kiln controller.
 | ![Image](https://github.com/EconoHobby/kiln-controller/blob/master/public/assets/images/breadboard.png) | Breadboard | breadboard, ribbon cable, connector for pi's gpio pins & connecting wires |
 | ![Image](https://github.com/EconoHobby/kiln-controller/blob/master/public/assets/images/ssr.png) | Solid State Relay | Zero crossing, make sure it can handle the max current of your kiln. Even if the kiln is 220V you can buy a single [3 Phase SSR](https://www.auberins.com/index.php?main_page=product_info&cPath=2_30&products_id=331). It's like having 3 SSRs in one.  Relays this big always require a heat sink. |
 | ![Image](https://github.com/EconoHobby/kiln-controller/blob/master/public/assets/images/ks-1018.png) | Electric Kiln | There are many old electric kilns on the market that don't have digital controls. You can pick one up on the used market cheaply.  This controller will work with 110V or 220V (pick a proper SSR). My kiln is a Skutt KS-1018. |
+=======
+| Hardware | Description |
+| -------- | ----------- |
+| [Banana Pi](https://wiki.banana-pi.org/Banana_Pi_BPI-M2_ZERO) | Virtually any Banana Pi will work since only a few GPIO pins are being used. |
+| [MAX31855](https://www.adafruit.com/product/269) or [MAX31856](https://www.adafruit.com/product/3263) | Thermocouple breakout board |
+| [K-Type Thermocouple](https://www.auberins.com/index.php?main_page=product_info&cPath=20_3&products_id=39) | Invest in a heavy duty, ceramic, k-type thermocouple designed for kilns |
+| Breadboard | breadboard, ribbon cable, connector for pi's gpio pins & connecting wires |
+| Solid State Relay | Zero crossing, make sure it can handle the max current of your kiln. Even if the kiln is 220V you can buy a single [3 Phase SSR](https://www.auberins.com/index.php?main_page=product_info&cPath=2_30&products_id=331). It's like having 3 SSRs in one.  Relays this big always require a heat sink. |
+| Electric Kiln | There are many old electric kilns on the market that don't have digital controls. You can pick one up on the used market cheaply.  This controller will work with 110V or 220V (pick a proper SSR). My kiln is a Skutt KS-1018. |
+>>>>>>> Stashed changes
 
 ### Schematic
 
@@ -56,15 +67,14 @@ My controller plugs into the wall, and the kiln plugs into the controller.
 
 ## Software 
 
-### Armbian OS
+### Raspjamming-OS_Banana-Pi-M2-Zero
 
-Download [Armbian OS](https://drive.google.com/file/d/11crpUOyLDn49eP76bszXfJiF2D7c0L-8/view). Use [Balena Etcher](https://www.balena.io/etcher/) Imaging tool to install the OS on an SD card. Boot the OS, open a terminal and...
+Download [Raspjamming-OS_Banana-Pi-M2-Zero](https://github.com/GrazerComputerClub/Raspjamming-OS_Banana-Pi-M2-Zero/releases). Use [Balena Etcher](https://www.balena.io/etcher/) Imaging tool to install the OS on an SD card. Boot the OS, open a terminal and...
 
-    $ sudo apt-get update
+    $ sudo apt-get --allow-releaseinfo-change update
     $ sudo apt-get dist-upgrade
-    $ sudo apt-get install python3-dev python3-virtualenv libevent-dev virtualenv
-    $ sudo apt-get install build-essential libssl-dev libffi-dev python-dev
-    $ git clone https://github.com/jbruce12000/kiln-controller
+    $ sudo apt-get install python3-dev python-dev python3-virtualenv virtualenv build-essential libevent-dev libssl-dev libffi-dev 
+    $ git clone https://github.com/EconoHobby/kiln-controller
     $ cd kiln-controller
     $ virtualenv -p python3 venv
     $ source venv/bin/activate
