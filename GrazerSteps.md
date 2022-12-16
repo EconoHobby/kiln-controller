@@ -12,6 +12,10 @@ restart
 
 passwd
 
+sudo raspi-config
+2 Boot Options
+console and auto boot
+
 wpa_passphrase <wifi_name> <wifi_password> | sudo tee /etc/wpa_supplicant.conf
 sudo wpa_supplicant -B -c /etc/wpa_supplicant.conf -i wlan0
 sudo dhclient wlan0
