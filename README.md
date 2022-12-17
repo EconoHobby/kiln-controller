@@ -79,8 +79,8 @@ Download [Raspjamming-OS_Banana-Pi-M2-Zero](https://github.com/GrazerComputerClu
     $ virtualenv -p python3 venv
     $ source venv/bin/activate
     $ export CFLAGS=-fcommon
-    $ pip3 install --upgrade setuptools
-    $ pip3 install greenlet bottle gevent gevent-websocket
+    $ sudo pip3 install --upgrade setuptools
+    $ sudo pip3 install greenlet bottle gevent gevent-websocket
 
 *Note: The above steps work on ubuntu if you prefer*
 
@@ -92,7 +92,7 @@ If you're done playing around with simulations and want to deploy the code on a 
     $ virtualenv -p python3 venv
     $ source venv/bin/activate
     $ export CFLAGS=-fcommon
-    $ pip3 install -r requirements.txt
+    $ sudo pip3 install -r requirements.txt
 
 ## Configuration
 
@@ -106,7 +106,7 @@ You may want to change the configuration parameter **sensor_time_wait**. It's th
 
 ### Server Startup
 
-    $ source venv/bin/activate; ./kiln-controller.py
+    $ source venv/bin/activate; sudo python3 kiln-controller.py
 
 ### Autostart Server onBoot
 If you want the server to autostart on boot, run the following command:
