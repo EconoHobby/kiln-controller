@@ -1,7 +1,7 @@
 https://github.com/GrazerComputerClub/Raspjamming-OS_Banana-Pi-M2-Zero/releases
-beware of german keybioard
+beware of german keyboard
 
-dpkg-reconfigure locales
+sudo dpkg-reconfigure locales
 deselect german with space
 select en-AU UTF-8
 
@@ -13,8 +13,10 @@ restart
 passwd
 
 sudo raspi-config
-2 Boot Options
-console and auto boot
+3 Boot Options
+console and autologin
+Advanced Options
+expand filesystem
 
 wpa_passphrase <wifi_name> <wifi_password> | sudo tee /etc/wpa_supplicant.conf
 sudo wpa_supplicant -B -c /etc/wpa_supplicant.conf -i wlan0
