@@ -111,7 +111,7 @@ You may want to change the configuration parameter **sensor_time_wait**. It's th
 ### Autostart Server onBoot
 If you want the server to autostart on boot, run the following command:
 
-    $ /home/pi/kiln-controller/start-on-boot
+    $ sudo chmod +x /home/pi/kiln-controller/start-on-boot; sudo /home/pi/kiln-controller/start-on-boot
 
 ### Client Access
 
