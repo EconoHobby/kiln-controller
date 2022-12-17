@@ -23,6 +23,11 @@ sudo wpa_supplicant -B -c /etc/wpa_supplicant.conf -i wlan0
 sudo dhclient wlan0
 add above two lines to /etc/rc.local
 
+https://github.com/EconoHobby/kiln-controller
+perform up to activating the venv
+cp -r /usr/local/lib/python3.7/dist-packages/RPi ~/kiln-controller/venv/lib/python3.7/site-packages/
+cp /usr/local/lib/python3.7/dist-packages/RPi.GPIO-0.7.200708.egg-info ~/kiln-controller/venv/lib/python3.7/site-packages/
+
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
 Physical pin 12 = BCM pin 18
