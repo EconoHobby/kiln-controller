@@ -27,7 +27,8 @@ Physical pin 12 = BCM pin 18
 see https://raw.githubusercontent.com/GrazerComputerClub/Raspjamming-OS_Banana-Pi-M2-Zero/master/BananaPiM2ZeroWiringPi.png
 scripts to turn on/off BCM pins 20 and 21
 
-// TODO cron to lock it
+sudo mkdir /mnt/usb
+
 
 // Bootup sequence
 1. read usb
@@ -37,3 +38,8 @@ scripts to turn on/off BCM pins 20 and 21
 5. check if ip address exists, if so turn on wifi LED
 6. start server
 7. if server running, turn on other server led
+
+/home/pi/kiln-controller/start-on-boot
+
+// TODO cron to lock it
+// TODO remove .git, remove git tokens
