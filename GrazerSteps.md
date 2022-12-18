@@ -8,15 +8,17 @@ select en-AU UTF-8
 sudo nano /etc/default/keyboard
 change to us
 
-restart
-
-passwd
-
 sudo raspi-config
 3 Boot Options
 console and autologin
-Advanced Options
-expand filesystem
+
+restart
+
+expand mmcblk's partition 2
+from sectors 532480-7053311 (3.1G)
+to sectors 532480-10000000 (4.5G)
+
+passwd
 
 wpa_passphrase <wifi_name> <wifi_password> | sudo tee /etc/wpa_supplicant.conf
 sudo wpa_supplicant -B -c /etc/wpa_supplicant.conf -i wlan0
