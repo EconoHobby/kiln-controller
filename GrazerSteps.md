@@ -14,9 +14,13 @@ console and autologin
 
 restart
 
-expand mmcblk's partition 2
-from sectors 532480-7053311 (3.1G)
-to sectors 532480-10000000 (4.5G)
+sudo fdisk /dev/mmcblk0
+p // see info
+d // delete partition 2
+n // recreate partition 2, primary, +6G, erase key
+w // write to commit changes
+sudo resize2fs /dev/mmcblk0p2
+df -h // check that /dev/root is now 6G
 
 passwd
 
