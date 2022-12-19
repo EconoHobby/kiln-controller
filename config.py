@@ -106,7 +106,7 @@ sim_R_ho_air   = 0.05   # K/W  " with internal air circulation
 # be in that scale.
 
 temp_scale          = "c" # c = Celsius | f = Fahrenheit - Unit to display
-time_scale_slope    = "m" # s = Seconds | m = Minutes | h = Hours - Slope displayed in temp_scale per time_scale_slope
+time_scale_slope    = "h" # s = Seconds | m = Minutes | h = Hours - Slope displayed in temp_scale per time_scale_slope
 time_scale_profile  = "m" # s = Seconds | m = Minutes | h = Hours - Enter and view target time in time_scale_profile
 
 # emergency shutoff the profile if this temp is reached or exceeded.
